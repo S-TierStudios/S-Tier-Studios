@@ -1,0 +1,158 @@
+/* alternative to jscript, keyframes section is for the loading animation to make thing smoother. still WIP. */
+.container {
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+
+
+/* fonts */
+
+@font-face {
+    font-family: monogram;
+    src: url(fontsrc/monogram.ttf),
+}
+@font-face {
+    font-family: monogram-extended;
+    src: url(fontsrc/monogram-extended.ttf);
+}
+@font-face {
+    font-family: monogram-extended-italic;
+    src: url(fontsrc/monogram-extended-italic.ttf);
+}
+
+@font-face {
+    font-family: pixdigi;
+    src: url(fontsrc/Pixel\ Digivolve\ Italic.ttf);
+
+
+}
+@font-face {
+    font-family: nord;
+    src: url('fontsrc/Nord-Medium.ttf')
+}
+@font-face {
+    font-family: outlast;
+    src: url('fontsrc/OutlastRegular.woff')
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://matiaslescano.com.ar/static/fonts/pixelicious.css');
+
+
+/* main css styling section */
+* {
+    box-shadow: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a {
+    font-family: pixdigi;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgb(242, 235, 235);
+}
+
+/* hide scrollbar but keep function */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.logo2 {
+    display: block;
+    width: auto;
+    float: inline-end;
+    padding-top: 5px;
+    margin-left: 15px;
+    
+    
+    font-family: pixdigi;
+    font-weight: 400;
+    font-size: 3vw;
+
+    
+    text-transform: uppercase;
+    color: transparent;
+    filter: blur(.3px);
+    animation: pulse 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: rgba(47, 0, 0, 0.9) -0.06em -0.06em, rgba(152, 43, 152, 0.893) 0 0;
+    }
+
+    33% {
+        text-shadow: rgba(0, 39, 36, 0.9) -0.15em -0.15em, rgba(120, 51, 177, 0.9) 0 0;
+    }
+
+    66% {
+        text-shadow: rgba(0, 0, 0, 0.9) -0.06em -0.06em, rgba(105, 69, 215, 0.9) 0 0;
+    }
+
+    100% {
+        text-shadow: rgba(28, 0, 100, 0.9) -0.15em -0.15em, rgba(69, 132, 215, 0.9) 0 0;
+    }
+}
+
+.logo {
+    cursor: pointer;
+
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease;
+}
+
+.nav_links li a:hover {
+    color: #0088a9
+}
+
+.about-background {
+
+    background-color: #cb1a90e1;
+    background-image: url('imgsrc/galaxy.jpg');
+    background-size: cover;
+    background-blend-mode: multiply;
+    
+    margin: 0;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    
+    border-top: 5px solid #cb1a90e1;
+    border-bottom: 5px solid #8711a8;
+
+}
